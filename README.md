@@ -68,7 +68,7 @@ Setiap `git push` otomatis deploy ulang.
 - Booking pending otomatis batal setelah 7 hari (atau sebelum jam mulai kalau lebih dekat).
 - Pembatalan/penolakan oleh artis maupun pelanggan wajib alasan, lalu WhatsApp terbuka dengan pesan berisi alasan.
 - 1 booking = 1 layanan. Fee jasa saja, bayar di tempat. Pelanggan tanpa login, dikenali dari nomor WA (tanpa OTP).
-- Anti double booking dijaga database (exclusion constraint), bukan cuma di browser.
+- Anti double booking dijaga database (exclusion constraint), bukan cuma di browser. 
 
 ## Coba di lokal
 ```bash
