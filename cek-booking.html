@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cek Booking — Meity Art</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="index.html" aria-label="Meity Art, beranda">
+      <span class="logo-word">Meity</span><span class="logo-sub">ART</span>
+    </a>
+    <nav class="site-nav" aria-label="Menu utama">
+      <a href="index.html#layanan">Layanan</a>
+      <a class="btn btn-primary btn-sm" href="booking.html">Booking</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container stack" style="max-width: 640px; padding: 40px 0 64px">
+  <div>
+    <p class="eyebrow">Cek booking</p>
+    <h1 style="font-size: clamp(36px, 6vw, 56px)">Status <span class="italic-accent">booking-mu</span></h1>
+  </div>
+
+  <form class="card stack" id="form-check">
+    <div class="field">
+      <label for="code">Kode booking</label>
+      <input id="code" name="code" placeholder="MA-XXXXXX" autocapitalize="characters" required>
+    </div>
+    <div class="field">
+      <label for="wa">Nomor WhatsApp saat booking</label>
+      <input id="wa" name="wa" type="tel" inputmode="tel" placeholder="08xxxxxxxxxx" required>
+    </div>
+    <button class="btn btn-primary" type="submit">Cek Status</button>
+  </form>
+
+  <div id="result"></div>
+</main>
+
+<script type="module" src="js/cek-booking.js"></script>
+</body>
+</html>

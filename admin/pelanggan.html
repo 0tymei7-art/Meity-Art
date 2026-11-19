@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Pelanggan — Admin Meity Art</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="admin-wrap">
+<nav class="admin-nav" id="admin-nav" aria-label="Menu admin"></nav>
+<main class="admin-main">
+<h1>Pelanggan</h1>
+<div class="row" style="margin-bottom: 16px">
+  <input id="search" type="search" placeholder="Cari nama atau nomor WA" aria-label="Cari pelanggan" style="max-width: 360px">
+</div>
+<div class="table-box">
+  <table>
+    <thead><tr><th>Nama</th><th>WhatsApp</th><th>Booking</th><th>Terakhir</th><th></th></tr></thead>
+    <tbody id="rows"><tr><td colspan="5" class="muted">Memuat…</td></tr></tbody>
+  </table>
+</div>
+</main>
+</div>
+<script type="module" src="../js/admin/pelanggan.js"></script>
+</body>
+</html>

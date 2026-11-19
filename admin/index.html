@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Dashboard — Admin Meity Art</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="admin-wrap">
+<nav class="admin-nav" id="admin-nav" aria-label="Menu admin"></nav>
+<main class="admin-main">
+<div class="row" style="align-items: flex-end; margin-bottom: 24px">
+  <div><p class="eyebrow" id="today-label"></p><h1 style="margin: 0">Ringkasan <span class="italic-accent">hari ini</span></h1></div>
+  <span class="spacer"></span>
+  <a class="btn btn-primary" href="kalender.html">Buka jadwal</a>
+</div>
+
+<div class="stats" style="margin-bottom: 32px">
+  <a class="card stat" href="booking.html?status=pending" style="text-decoration: none; color: inherit">
+    <div class="small muted">Menunggu approve</div><div class="num" id="st-pending">–</div>
+  </a>
+  <div class="card stat"><div class="small muted">Booking hari ini</div><div class="num" id="st-today">–</div></div>
+  <div class="card stat"><div class="small muted">Terkonfirmasi 7 hari ke depan</div><div class="num" id="st-week">–</div></div>
+  <div class="card stat"><div class="small muted">Pemasukan bulan ini</div><div class="num" id="st-income" style="font-size: 30px">–</div><div class="small muted" id="st-income-n"></div></div>
+</div>
+
+<h2>Perlu diproses</h2>
+<div class="list" id="pending-list" style="margin-bottom: 32px"><div class="empty">Memuat…</div></div>
+
+<h2>Jadwal 7 hari ke depan</h2>
+<div class="list" id="upcoming-list"><div class="empty">Memuat…</div></div>
+</main>
+</div>
+<script type="module" src="../js/admin/dashboard.js"></script>
+</body>
+</html>

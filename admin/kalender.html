@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Kalender — Admin Meity Art</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="admin-wrap">
+<nav class="admin-nav" id="admin-nav" aria-label="Menu admin"></nav>
+<main class="admin-main">
+<div class="row" style="align-items: flex-end; margin-bottom: 8px">
+  <div><h1 style="margin: 0">Kalender</h1><p class="muted" style="margin: 0">Klik area kosong untuk menambah blok. Pelanggan hanya melihat slot dari blok <b>Buka Booking</b>.</p></div>
+  <span class="spacer"></span>
+  <button class="btn btn-primary" type="button" id="add-block">+ Tambah blok</button>
+</div>
+
+<div class="cal-toolbar" style="margin-top: 16px">
+  <button class="btn btn-outline btn-sm" type="button" id="prev" aria-label="Minggu sebelumnya">‹</button>
+  <button class="btn btn-outline btn-sm" type="button" id="this-week">Minggu ini</button>
+  <button class="btn btn-outline btn-sm" type="button" id="next" aria-label="Minggu berikutnya">›</button>
+  <strong id="range-label" style="margin-left: 8px"></strong>
+</div>
+
+<div class="cal-legend">
+  <span><i style="background: var(--blk-open)"></i>Buka Booking</span>
+  <span><i style="background: var(--blk-main)"></i>Kerja Utama</span>
+  <span><i style="background: var(--blk-upgrade)"></i>Upgrade Diri</span>
+  <span><i style="background: var(--blk-personal)"></i>Pribadi</span>
+  <span><i style="background: var(--butter)"></i>Booking menunggu</span>
+  <span><i style="background: var(--cherry)"></i>Booking terkonfirmasi</span>
+  <span>↻ = berulang mingguan</span>
+</div>
+
+<div class="cal-scroll"><div class="cal" id="cal"></div></div>
+</main>
+</div>
+<script type="module" src="../js/admin/kalender.js"></script>
+</body>
+</html>

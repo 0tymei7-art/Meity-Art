@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meity Art — Nail Art</title>
+<meta name="description" content="Meity Art — layanan nail art. Lihat portofolio, pilih layanan, dan booking jadwal secara online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="index.html" aria-label="Meity Art, beranda">
+      <span class="logo-word">Meity</span><span class="logo-sub">ART</span>
+    </a>
+    <nav class="site-nav" aria-label="Menu utama">
+      <a href="#layanan">Layanan</a>
+      <a href="#portofolio">Portofolio</a>
+      <a href="cek-booking.html">Cek Booking</a>
+      <a class="btn btn-primary btn-sm" href="booking.html">Booking</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <p class="eyebrow">Nail Art · By Appointment</p>
+        <h1>Kuku cantik, <span class="italic-accent">jadwal rapi.</span></h1>
+        <p class="muted" style="font-size: 18px; max-width: 520px">Pilih layanan, pilih jam yang masih kosong, lalu kirim booking. Lokasi bisa di mana saja sesuai kesepakatan. Bayar di tempat.</p>
+        <div class="row" style="margin-top: 24px">
+          <a class="btn btn-primary" href="booking.html">Booking Sekarang</a>
+          <a class="btn btn-outline" href="#portofolio">Lihat Portofolio</a>
+        </div>
+      </div>
+      <div class="hero-art" id="hero-art" aria-hidden="true">
+        <span class="logo-word">Meity</span><span class="logo-sub">ART</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="layanan">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Layanan</p>
+        <h2>Pilih layananmu</h2>
+        <p class="muted">Durasi adalah estimasi. Satu booking untuk satu layanan.</p>
+      </div>
+      <div class="grid" id="service-list"><div class="empty">Memuat layanan…</div></div>
+    </div>
+  </section>
+
+  <section id="portofolio">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Portofolio</p>
+        <h2>Hasil kerja <span class="italic-accent">terbaru</span></h2>
+      </div>
+      <div class="gallery" id="gallery"><div class="empty">Memuat portofolio…</div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="card card-ink" style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center">
+        <div style="flex: 1 1 320px">
+          <h2 style="margin-bottom: 8px">Cara booking</h2>
+          <ol class="muted" style="margin: 0; padding-left: 20px">
+            <li>Pilih layanan dan jam yang tersedia.</li>
+            <li>Isi nama, nomor WhatsApp, dan lokasi.</li>
+            <li>Tunggu konfirmasi dari artis lewat WhatsApp (maksimal 7 hari).</li>
+          </ol>
+        </div>
+        <a class="btn btn-primary" href="booking.html">Mulai Booking</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container row">
+    <span class="logo"><span class="logo-word" style="font-size: 26px">Meity</span><span class="logo-sub">ART</span></span>
+    <span class="spacer"></span>
+    <a id="footer-wa" class="btn btn-wa btn-sm" href="#" target="_blank" rel="noopener">Chat WhatsApp</a>
+    <a id="footer-ig" class="btn btn-ghost btn-sm hidden" href="#" target="_blank" rel="noopener">Instagram</a>
+  </div>
+</footer>
+
+<script type="module" src="js/home.js"></script>
+</body>
+</html>

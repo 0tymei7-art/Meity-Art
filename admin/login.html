@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Login Admin — Meity Art</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<main class="auth-wrap">
+  <form class="card card-ink stack auth-card" id="form-login">
+    <a class="logo" href="../index.html" style="align-self: center"><span class="logo-word" style="font-size: 48px">Meity</span><span class="logo-sub">ART</span></a>
+    <h1 style="font-size: 32px; text-align: center; margin: 0">Masuk sebagai artis</h1>
+    <p class="muted small hidden" id="denied" style="margin: 0; color: var(--cherry-dark)">Akun ini belum terdaftar sebagai admin.</p>
+    <div class="field">
+      <label for="email">Email</label>
+      <input id="email" type="email" autocomplete="email" required>
+    </div>
+    <div class="field">
+      <label for="password">Password</label>
+      <input id="password" type="password" autocomplete="current-password" required>
+    </div>
+    <button class="btn btn-primary" type="submit">Masuk</button>
+  </form>
+</main>
+<script type="module">
+  import { sb } from '../js/supabase.js';
+  import { $, toast } from '../js/utils.js';
+
+  if (new URLSearchParams(location.search).get('denied')) $('#denied').classList.remove('hidden');
+  const { data: { session } } = await sb.auth.getSession();
+  if (session) location.replace('index.html');
+
+  $('#form-login').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = e.target.querySelector('button');
+    btn.disabled = true;
+    const { error } = await sb.auth.signInWithPassword({ email: $('#email').value.trim(), password: $('#password').value });
+    btn.disabled = false;
+    if (error) return toast('Email atau password salah.', 'error');
+    location.replace('index.html');
+  });
+</script>
+</body>
+</html>

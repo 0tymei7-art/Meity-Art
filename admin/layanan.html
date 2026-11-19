@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Layanan — Admin Meity Art</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="admin-wrap">
+<nav class="admin-nav" id="admin-nav" aria-label="Menu admin"></nav>
+<main class="admin-main">
+<div class="row" style="align-items: flex-end; margin-bottom: 24px">
+  <div><h1 style="margin: 0">Layanan</h1><p class="muted" style="margin: 0">Durasi dipakai untuk menghitung panjang slot. Harga = fee jasa, bayar di tempat.</p></div>
+  <span class="spacer"></span>
+  <button class="btn btn-outline" type="button" id="add-category">+ Kategori</button>
+  <button class="btn btn-primary" type="button" id="add-service">+ Layanan</button>
+</div>
+<div id="list" class="stack"><div class="empty">Memuat…</div></div>
+</main>
+</div>
+<script type="module" src="../js/admin/layanan.js"></script>
+</body>
+</html>
